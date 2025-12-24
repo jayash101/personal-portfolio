@@ -232,7 +232,7 @@ nav ul li {
   }
 
   a {
-    z-index: 99;
+    z-index: 30;
     font-size: 0.8rem;
   }
 }
