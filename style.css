@@ -1,0 +1,519 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Google Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  background: #1a3138;
+  background: linear-gradient(
+    90deg,
+    rgba(26, 49, 56, 1) 0%,
+    rgba(1, 1, 43, 1) 50%,
+    rgba(0, 0, 0, 1) 100%,
+    rgba(0, 0, 0, 1) 85%
+  );
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5vh;
+  color: yellow;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  overflow: hidden;
+  background: transparent;
+  transition: background-color 0.2s ease;
+}
+
+header.scrolled {
+  background-color: #000;
+}
+
+nav {
+  padding: 2vh 4vw;
+  display: flex;
+  justify-content: end;
+}
+
+nav ul {
+  display: none;
+}
+
+nav button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+nav ul li {
+  font-size: 1.2rem;
+}
+
+#about {
+  padding: 4vh 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #00000020;
+  gap: 4vh;
+}
+
+#about img {
+  height: 50vw;
+  filter: blur(0.03rem);
+}
+
+#about article {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  font-size: 0.7rem;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+#about article h2 {
+  font-size: 2rem;
+  text-align: start;
+  letter-spacing: 0rem;
+}
+
+#about article p {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+#about article button {
+  padding: 1vh 2vw;
+  width: fit-content;
+  border-radius: 2px;
+  border: none;
+  color: white;
+  background-color: #7575df;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+#about article button a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+#skills {
+  padding: 4vh 2vw;
+  margin-bottom: 4vh;
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+}
+
+#skills h2 {
+  font-size: 2rem;
+  color: #7575df;
+  text-transform: uppercase;
+}
+
+#skills ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#skills ul li ion-icon {
+  font-size: 2rem;
+}
+
+#skills ul li img {
+  height: 2vw;
+}
+
+#projects {
+  padding: 4vh 2vw;
+  margin-bottom: 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4vh;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  color: #7575df;
+  text-transform: uppercase;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 4vw;
+}
+
+.project-container article {
+  position: relative;
+  max-width: 20rem;
+  overflow: hidden;
+  border-radius: 2px;
+  background-color: #2261ad30;
+  cursor: pointer;
+  box-shadow: 0 0.3vw 0.5rem #00000030;
+  height: 25vh;
+  transition: box-shadow 0.2s;
+}
+
+#projects .project-container article:hover .ecom {
+  background-color: transparent;
+  box-shadow: 0 1vw 0.5rem #00000030;
+  opacity: 0.5;
+}
+
+.ecom {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.699),
+    rgba(22, 22, 22, 0.317)
+  );
+
+  h3 {
+    color: lightcyan;
+    font-size: 1.3rem;
+    z-index: 99;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 0.8rem;
+    z-index: 99;
+  }
+
+  a {
+    z-index: 999;
+    font-size: 0.8rem;
+  }
+}
+
+#contact-section {
+  padding: 4vh 2vw;
+  margin-bottom: 4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 8vw;
+}
+
+#contact-section #contact {
+  width: 80vw;
+}
+
+#contact-section h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #7575df;
+  text-transform: uppercase;
+}
+
+#contact-section #message form {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  padding: 2vh 0;
+  margin-top: 1vh;
+  width: 80vw;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+.message-form-input {
+  padding: 1vh 0;
+  text-indent: 0.2rem;
+  border: none;
+  border-radius: 1px;
+  color: darkslategray;
+  font-weight: 500;
+}
+
+.message-form-input:focus {
+  outline: 0.1rem solid violet;
+}
+
+#contact-section #message button {
+  padding: 1vh 0;
+  background-color: #7575df;
+  border: 1px solid #7575df;
+  border-radius: 2px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact-section #message button:hover {
+  background-color: white;
+  color: #7575df;
+  transition: all 0.3s ease;
+}
+
+#contact-section #contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.contact-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.contact-list ion-icon {
+  color: #a67beb;
+  font-size: 1rem;
+}
+
+footer {
+  width: 100%;
+  background-color: #ffffff14;
+  padding: 2vh 8vw;
+  color: #dec9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+  font-size: 0.8rem;
+}
+
+footer p span {
+  font-family: "Calibri", sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+footer ul {
+  display: none;
+}
+
+footer ul li:not(footer ul li:first-child) {
+  border-left: 1px solid;
+  border-left-width: 2px;
+  padding-left: 1vw;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 6vw;
+  right: 4vw;
+  padding: 2.5vw;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #7575df;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 999;
+}
+
+.back-to-top:active {
+  background: white;
+  color: #7575df;
+  transition: background 0.3s ease;
+}
+
+.back-to-top.display {
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  nav {
+    padding: 0 4vw;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: end;
+    gap: 4vw;
+    padding-block: 4vh;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  #about {
+    padding: 2vh 2vw;
+    flex-direction: row;
+  }
+
+  #about img {
+    height: 25vw;
+    filter: blur(0.03rem);
+  }
+
+  #about article {
+    gap: 1vh;
+    font-size: 0.9rem;
+  }
+
+  #about article h2 {
+    font-size: 3rem;
+    letter-spacing: 0rem;
+  }
+
+  #about article p {
+    width: 100%;
+  }
+
+  #about article button {
+ margin: 0 0;
+}
+
+  #skills {
+    margin-top: 0;
+    gap: 6vh;
+  }
+
+  #skills h2 {
+    font-size: 3rem;
+    color: #7575df;
+    text-transform: uppercase;
+  }
+
+  #skills ul li ion-icon {
+    font-size: 6rem;
+  }
+
+  #projects {
+    gap: 6vh;
+  }
+
+  #projects h2 {
+    font-size: 3rem;
+  }
+
+  .project-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2vw;
+  }
+
+  #contact-section {
+    padding: 4vh 2vw;
+    margin-bottom: 4vh;
+    flex-direction: row;
+    align-items: start;
+    gap: 8vw;
+  }
+
+  #contact-section #contact {
+    width: 30vw;
+  }
+
+  #contact-section h2 {
+    text-align: start;
+    font-size: 3rem;
+  }
+
+  #contact-section #message form {
+    margin-top: 2vh;
+    width: 40vw;
+
+    label {
+      font-size: 1.1rem;
+    }
+  }
+
+  #contact-section #contact {
+    gap: 4vh;
+  }
+
+  .contact-list {
+    justify-content: start;
+    font-size: 1.1rem;
+  }
+
+  .contact-list ion-icon {
+    font-size: 1.7rem;
+  }
+
+  footer {
+    font-size: 1rem;
+    justify-content: space-between;
+    margin-top: 0;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+    align-items: center;
+  }
+
+  .back-to-top {
+    bottom: 2vw;
+    right: 1.5vw;
+    padding: 0.5vw;
+    font-size: 2rem;
+  }
+
+  .back-to-top:hover {
+    background: white;
+    color: #7575df;
+    transition: background 0.3s ease;
+  }
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li class="link-click"><a href="#about">About</a></li>
+          <li class="link-click"><a href="#skills">Skills</a></li>
+          <li class="link-click"><a href="#projects">Projects</a></li>
+          <li class="link-click"><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <article>
+          <h2>I am a web developer</h2>
+
+          <p>
+            I am a web developer passionate about building clean, accessible and
+            responsible websites.
+          </p>
+
+          <button>
+            <a
+              href="https://drive.google.com/file/d/19FM23Rbnu5wNieXHR7PDlWmAXZvveXwb/view?usp=sharing"
+              >Download CV</a
+            >
+          </button>
+        </article>
+
+        <img src="/images/jayash.png" alt="user-image" />
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+
+        <ul>
+          <li><ion-icon name="logo-html5"></ion-icon></li>
+          <li><ion-icon name="logo-css3"></ion-icon></li>
+          <li><ion-icon name="logo-javascript"></ion-icon></li>
+          <li><ion-icon name="logo-nodejs"></ion-icon></li>
+          <li><ion-icon name="logo-react"></ion-icon></li>
+          <li><ion-icon name="logo-python"></ion-icon></li>
+          <li><img src="/images/nextjs.svg" alt="Next JS Icon" /></li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>My Projects</h2>
+
+        <section class="project-container">
+          <article>
+            <section class="card-overlay">
+              <h3>E-commerce Website</h3>
+
+              <p>
+                A full stack ecommerce store for online product shopping,
+                checkout and payment processing for customers and product
+                management for admin users
+              </p>
+
+              <a
+                href="https://github.com/jayash101/Clothing-Store"
+                target="_blank"
+                rel="noopener"
+                >View Project</a
+              >
+            </section>
+
+            <img
+              src="/images/ecom.jpeg"
+              alt="E-commerce Wallpaper"
+              class="ecom"
+            />
+          </article>
+
+          <article>
+            <section class="card-overlay">
+              <h3>Anonymous Feedback</h3>
+
+              <p>
+                A full stack anonymous feedback system for posting comments
+                without revealing username or email where the host can also
+                disable the comments
+              </p>
+
+              <a
+                href="https://github.com/jayash101/feedback-me"
+                target="_blank"
+                rel="noopener"
+                >View Project</a
+              >
+            </section>
+
+            <img
+              src="/images/feeback.jpg"
+              alt="E-commerce Wallpaper"
+              class="ecom"
+            />
+          </article>
+
+          <article>
+            <section class="card-overlay">
+              <h3>Analytical Dashboard</h3>
+
+              <p>
+                Real time dashboard using Nextjs and MongoDB for real-time data
+                visualization and analytics
+              </p>
+
+              <a
+                href="https://github.com/jayash101/next-dashboard"
+                target="_blank"
+                rel="noopener"
+                >View Project</a
+              >
+            </section>
+
+            <img
+              src="/images/dash.png"
+              alt="E-commerce Wallpaper"
+              class="ecom"
+            />
+          </article>
+
+          <article>
+            <section class="card-overlay">
+              <h3>Shortfied - Link Shortener</h3>
+              <p>
+                A link shortener website using Next.js and MongoDB for efficient
+                URL management and analytics
+              </p>
+
+              <a
+                href="https://github.com/jayash101/shortified"
+                target="_blank"
+                rel="noopener"
+                >View Project</a
+              >
+            </section>
+
+            <img
+              src="/images/shorten.jpeg"
+              alt="E-commerce Wallpaper"
+              class="ecom"
+            />
+          </article>
+        </section>
+      </section>
+
+      <section id="contact-section">
+        <section id="message">
+          <h2>Message Me</h2>
+
+          <form>
+            <label for="name">
+              Name
+              <input
+                type="name"
+                name="name"
+                class="message-form-input"
+                required
+              />
+            </label>
+
+            <label for="email">
+              Email
+              <input
+                type="email"
+                name="email"
+                class="message-form-input"
+                required
+              />
+            </label>
+
+            <label for="message">
+              Your message
+
+              <textarea
+                name="message"
+                class="message-form-input"
+                rows="4"
+                required
+              ></textarea>
+            </label>
+
+            <button type="submit">Send</button>
+          </form>
+        </section>
+
+        <section id="contact">
+          <h2>Contact Me</h2>
+
+          <hr />
+
+          <section class="contact-list">
+            <ion-icon name="call"></ion-icon>
+            <span> +9779863020003 </span>
+          </section>
+
+          <section class="contact-list">
+            <ion-icon name="mail"></ion-icon>
+            <span> jayashbasnetit@gmail.com </span>
+          </section>
+
+          <section class="contact-list">
+            <ion-icon name="location"></ion-icon>
+            <span> +9779863020003 </span>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <button class="back-to-top" title="Go to top">
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+
+    <footer>
+      <p>Copyright <span>&copy;</span> 2025 Jayash Basnet</p>
+
+      <ul>
+        <li class="link-click"><a href="#">Home</a></li>
+        <li class="link-click"><a href="#about">About</a></li>
+        <li class="link-click"><a href="#skills">Skills</a></li>
+        <li class="link-click"><a href="#projects">Projects</a></li>
+        <li class="link-click"><a href="#contact">Contact</a></li>
+      </ul>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <script>
+      const header = document.querySelector("header");
+      const backToTop = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          backToTop.classList.add("display");
+        } else {
+          backToTop.classList.remove("display");
+        }
+      });
+
+      backToTop.addEventListener("click", () => {
+        document.documentElement.scrollTop = 0;
+      });
+    </script>
+  </body>
+</html>
