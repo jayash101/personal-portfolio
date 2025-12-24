@@ -222,17 +222,17 @@ nav ul li {
   h3 {
     color: lightcyan;
     font-size: 1.3rem;
-    z-index: 10;
+    z-index: 1;
   }
 
   p {
     text-align: justify;
     font-size: 0.8rem;
-    z-index: 10;
+    z-index: 1;
   }
 
   a {
-    z-index: 10;
+    z-index: 1;
     font-size: 0.8rem;
   }
 }
